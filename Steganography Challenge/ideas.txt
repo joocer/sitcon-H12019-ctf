@@ -1,0 +1,5 @@
+- bar code/QR code
+- UV ink
+- binary or ASCII text (would need to be short)
+
+Flag hidden on a poster, sticker or sign in the room. 
