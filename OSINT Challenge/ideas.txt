@@ -1,1 +1,11 @@
 - end up with coordinates to a named building, have to google to get the name/what's on the sign etc
+
+clue - where did paul go to school 
+coords - name of school 
+look at the google maps of the school, get the school logo 
+logo identifies the box 
+
+or logo is a key to get a chance of going at the box
+
+
+
