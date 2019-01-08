@@ -1,2 +1,13 @@
 - rail-fence cipher (https://en.wikipedia.org/wiki/Rail_fence_cipher)
 - ceasar cipher
+
+give them the key and the cipher text and only 4 chars - a pin number 
+encrypted with a classical cipher
+
+colour coded - straight up substitution cipher, caesar, something harder... 
+
+Black Hat ASCII chars for the keyboard arrows, map them out then write it down 
+
+up up up right down down down etc - makes a picture or a word
+
+baconian cipher __a_ _a___ 
