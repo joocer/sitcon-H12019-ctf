@@ -1,0 +1,23 @@
+The Challenge
+You find a mysterious box with your name on it. Attached to the box is a note.
+
+"Well hello there Lad/y!
+
+Apologies for the puzzle box but I needed something to slow you down as we've got to string this out for a few more minutes.
+
+I had one of the more devious colleagues throw this box together with what he calls 'A lossy cipher'! What ingenious folk, makes me wonder about the graffiti I've been finding on the toilet door...
+
+Anyway, the following is just about the only clue they would give me so I hope it is enough:
+
+The Clue:
+1              +             1              =             2
+2              +             2              =             4
+4              +             4              =             8
+8              +             8              =             7
+
+The Cipher:
+
+4 5 9 9 7 3 8 9
+9 1 2 4 1 1 7 6
+3 6 9 3 2 8 7 1
+5 9 4 1 3
