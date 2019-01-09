@@ -1,0 +1,3 @@
+shamelessly stolen from nasa ctf write up
+
+For task 0, you are given a network traffic capture and asked to determine the attacker’s listening post, which is the attacker’s server. This is just a warm-up task, since there are only 2 IPs, 10.130.171.154 and 172.18.105.113.
