@@ -19,6 +19,10 @@ footer {
     color: #00395d;
     font-size: 1.5em;
 }
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #0074a6;
+}
+
 .navbar {
     border: 0px solid transparent;
 }
@@ -29,8 +33,18 @@ footer {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-
     color: white;
  }
 
- 
+ .caption {
+     text-align: left;
+ }
+
+ .badge { 
+     background-color: #0074a6;
+     font-size: 1em;
+     display: inline;
+     vertical-align: default;
+     font-weight: 400;
+     padding: 5px 20px;
+ }
