@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Poppins';
+src: url('../webfonts/Poppins-SemiBold.ttf');
+font-weight: 600;
+font-style: normal;
+}
+
+@font-face {
+  font-family: 'Expert Sans Light';
+src: url('../webfonts/expertsans-light-webfont.woff');
+font-style: normal;
+}
