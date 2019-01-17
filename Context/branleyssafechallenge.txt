@@ -1,0 +1,9 @@
+Branleys Safe cracker challenge! 
+
+Get the safe code to open the safe and get the secrets!
+
+682 - one number is correct and well placed
+614 - one number is correct but wrong placed
+206 - two numbers are correct but wrong places
+738 - nothing is correct
+870 - one number is correct but wrong place
