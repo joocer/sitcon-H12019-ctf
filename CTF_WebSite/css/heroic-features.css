@@ -7,6 +7,10 @@ body {
     margin-bottom: 30px;
 }
 
+.profile-picture {
+    height: 16em;
+}
+
 h1  {
     letter-spacing: -.25px;
 }
@@ -100,4 +104,17 @@ footer {
     font-size: 1.2rem;
     line-height: 1.33333;
     margin-bottom: 1em;
+}
+
+.fa-blank {
+    visibility:hidden !important;
+}
+
+#phone-times td {
+    padding-left: 35px;
+}
+
+.finder {
+    font-size: 1.4em;
+    padding: auto 20px;
 }
