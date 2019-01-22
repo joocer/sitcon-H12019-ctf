@@ -1,0 +1,5 @@
+CVE-2019-0001 this is your life
+
+By the time a vulnerability has a CVE number, it is nearly dead. 
+
+so where does it all start? it starts with someone detecting that something isnt working as it should, but after that which path it goes depends on who found it and their intentions. 
