@@ -3,3 +3,11 @@ CVE-2019-0001 this is your life
 By the time a vulnerability has a CVE number, it is nearly dead. 
 
 so where does it all start? it starts with someone detecting that something isnt working as it should, but after that which path it goes depends on who found it and their intentions. 
+
+all good sploits start with a crash, so how do we produce a crash?
+could be normal operation, misconfiguration or strange inputs the application wasnt designed to cope with. 
+if we get it to crash, can we get it to do it again?
+if we can do it repeatably, can we collect core dumps to see what it was that went wrong and whether we can exploit that further?
+and then, whether we want to depends on whether or not those dumps suggest we can do something interesting and whether we can do that from whatever position we hold. FOr instance, we are more interested in a vulnerability which allows us to execute code remotely than one where we have to already be authenitcated on the box. 
+
+CVE-2019-0001 started life on a customer site. Things were not well in the network. The engineers had just lost mannagement access to the Juniper MX appliance and users were phoning the helpdesk. An incident ticket was cut. Justin, a plucky young chap, got console access and found the Broadband Edge subscriber management daemon had crashed. Quick thinking as ever, he reloaded the daemon and sure enough full service was restored. Justin started looking into what had lead to the crash and found that if he recreated the conditions prior to the crash then he could get it to happen again. Justin raised a case with JTAC. 
