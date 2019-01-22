@@ -7,24 +7,44 @@ body {
     margin-bottom: 30px;
 }
 
+.profile-picture {
+    height: 16em;
+}
+
+h1  {
+    letter-spacing: -.25px;
+}
+h2 {
+    margin-top: 25px;
+    font-size: 2.875rem;
+    font-weight: 100;
+    line-height: 1.18;
+    letter-spacing: -.5px;
+    color: #00395d;
+}
+
 footer {
     margin: 50px 0;
 }
 
-.navbar-inverse {
+.navbar {
     background-color: #e5ebee;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar .navbar-nav>li>a {
     color: #00395d;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
-.navbar-inverse .navbar-nav>li>a:hover {
+.navbar .navbar-nav>li>a:hover {
     color: #0074a6;
 }
 
 .navbar {
     border: 0px solid transparent;
+}
+
+.navbar .navbar-toggle {
+    border-color: transparent;
 }
 
 .jumbotron {
@@ -36,6 +56,12 @@ footer {
     color: white;
  }
 
+ .jumbo-tagline {
+    font-size: 1.2rem;
+    line-height: 1.33333;
+    margin-bottom: 1em;
+ }
+
  .caption {
      text-align: left;
  }
@@ -44,7 +70,51 @@ footer {
      background-color: #0074a6;
      font-size: 1em;
      display: inline;
+     color: #FFFFFF;
      vertical-align: default;
      font-weight: 400;
      padding: 5px 20px;
  }
+
+.aperture-left {
+    position: relative;
+    padding-left: 20px;
+}
+
+.aperture-left::before {
+    background-color: #00aeef;
+    border: 2px solid #00aeef;
+    border-radius: 10px;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    z-index: 2;
+}
+
+.space-left {
+    position: relative;
+    padding-left: 20px;
+}
+
+.content>p {
+    font-size: 1.2rem;
+    line-height: 1.33333;
+    margin-bottom: 1em;
+}
+
+.fa-blank {
+    visibility:hidden !important;
+}
+
+#phone-times td {
+    padding-left: 35px;
+}
+
+.finder {
+    font-size: 1.4em;
+    padding: auto 20px;
+}
