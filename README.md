@@ -8,27 +8,46 @@ SITCon February 2019 Away Day - Capture the Flag Challenges
 #### challenges should only rely on common knowledge or knowledge given in the challenge
 #### challenges should all be within the ability of the audience to solve
 
-## Customers:
-*1005941001*
+## Customers
 
+##### 1005941001
 URL: https://branleys.com/customer/1005941001.html
+Algo:
+Physical (key): Wifi SSID
+Cyber (key):
+Cipher: 
 
-*1005941002*
-
+##### 1005941002
 URL: https://branleys.com/customer/1005941002.html
+Algo:
+Physical (key):
+Cyber (key):
+Cipher: 
 
-*1005941003*
-
+##### 1005941003
 URL: https://branleys.com/customer/1005941003.html
+Algo:
+Physical (key):
+Cyber (key):
+Cipher: 
 
-*1005941004*
-
+##### 1005941004
 URL: https://branleys.com/customer/1005941004.html
+Algo:
+Physical (key):
+Cyber (key):
+Cipher: 
 
-*1005941005*
-
+##### 1005941005
 URL: https://branleys.com/customer/1005941005.html
+Algo:
+Physical (key):
+Cyber (key):
+Cipher: 
 
-*1005941006*
-
+##### 1005941006
 URL: https://branleys.com/customer/1005941006.html
+Algo:
+Physical (key):
+Cyber (key):
+Cipher: 
