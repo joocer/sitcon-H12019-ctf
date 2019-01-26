@@ -11,43 +11,43 @@ SITCon February 2019 Away Day - Capture the Flag Challenges
 ## Customers
 
 ##### 1005941001
-URL: https://branleys.com/customer/1005941001.html
-Algo:
-Physical (key): Wifi SSID
-Cyber (key):
-Cipher: 
+URL: https://branleys.com/customer/1005941001.html <br>
+Algo:  <br>
+Physical (key): Wifi SSID <br>
+Cyber (key):  <br>
+Cipher:  <br>
 
 ##### 1005941002
-URL: https://branleys.com/customer/1005941002.html
-Algo:
-Physical (key):
-Cyber (key):
-Cipher: 
+URL: https://branleys.com/customer/1005941002.html <br>
+Algo:  <br>
+Physical (key):  <br>
+Cyber (key):  <br>
+Cipher:   <br>
 
 ##### 1005941003
-URL: https://branleys.com/customer/1005941003.html
-Algo:
-Physical (key):
-Cyber (key):
-Cipher: 
+URL: https://branleys.com/customer/1005941003.html <br>
+Algo:  <br>
+Physical (key):  <br>
+Cyber (key):  <br>
+Cipher:   <br>
 
 ##### 1005941004
-URL: https://branleys.com/customer/1005941004.html
-Algo:
-Physical (key):
-Cyber (key):
-Cipher: 
+URL: https://branleys.com/customer/1005941004.html <br>
+Algo:   <br>
+Physical (key):   <br>
+Cyber (key):   <br>
+Cipher:    <br>
 
 ##### 1005941005
-URL: https://branleys.com/customer/1005941005.html
-Algo:
-Physical (key):
-Cyber (key):
-Cipher: 
+URL: https://branleys.com/customer/1005941005.html <br>
+Algo:   <br>
+Physical (key):   <br>
+Cyber (key):   <br>
+Cipher:    <br>
 
 ##### 1005941006
-URL: https://branleys.com/customer/1005941006.html
-Algo:
-Physical (key):
-Cyber (key):
-Cipher: 
+URL: https://branleys.com/customer/1005941006.html <br>
+Algo:   <br>
+Physical (key):   <br>
+Cyber (key):   <br>
+Cipher:    <br>
