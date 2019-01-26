@@ -13,21 +13,21 @@ SITCon February 2019 Away Day - Capture the Flag Challenges
 ##### 1005941001
 URL: https://branleys.com/customer/1005941001.html <br>
 Algo:  <br>
-Physical (key): Wifi SSID <br>
+Physical (key): Wifi Captive Portal <br>
 Cyber (key):  <br>
 Cipher:  <br>
 
 ##### 1005941002
 URL: https://branleys.com/customer/1005941002.html <br>
 Algo:  <br>
-Physical (key):  <br>
+Physical (key): Help Desk <br>
 Cyber (key):  <br>
 Cipher:   <br>
 
 ##### 1005941003
 URL: https://branleys.com/customer/1005941003.html <br>
 Algo:  <br>
-Physical (key):  <br>
+Physical (key): Hidden on poster (fine print)<br>
 Cyber (key):  <br>
 Cipher:   <br>
 
@@ -48,6 +48,6 @@ Cipher:    <br>
 ##### 1005941006
 URL: https://branleys.com/customer/1005941006.html <br>
 Algo:   <br>
-Physical (key):   <br>
+Physical (key):  Hidden on poster (stego) <br>
 Cyber (key):   <br>
 Cipher:    <br>
