@@ -143,3 +143,12 @@ footer {
     padding: 20px 40px;
     font-size: 1.4em;
 }
+
+.form-control { 
+    width: 100%;
+}
+
+.hide {
+    display: none;
+    visibility: hidden !important;
+}
