@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Branleys Bank - good old-fashoined service - like we're stuck in the 90s</title>
+    <title>Branleys Bank - Branch Finder</title>
     <link rel="icon" type="image/png" href="img/logo.png" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -15,63 +16,96 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/heroic-features.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><img src="img/logotype.png" width="140px" id="headerlogo" /></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="branches.html"><i class="fas fa-map-marker-alt"></i> Branch Finder</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html"><i class="fas fa-phone fa-flip-horizontal"></i> Contact Us</i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html"><span class="badge badge-pill">Log In</span></a>
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="index.html"><img src="img/logotype.png" width="140px" id="headerlogo" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="branches.html"><i class="fas fa-map-marker-alt"></i> Branch Finder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-phone fa-flip-horizontal"></i> Contact
+                            Us</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><span class="badge badge-pill">Log In</span></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <!-- Page Content -->
     <div class="container">
         <!-- Jumbotron Header -->
-        
+
         <div class="content">
             <h2 class="aperture-left">Branch Finder</h2>
             <br />
-            <form action="branch-results.html" method="GET">
-                <div class="form-row">
-                    <div class="form-group col-sm-9">
-                      <input type="text" class="form-control" id="inputCity" placeholder="please enter a town or postcode">
+
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="img/map-solihull.png" class="img-responsive" width="100%"/>
+                    <div class="promo-content">
+                        <h3>Solihull</h3>
+                        <br />
+                        The Bar<br />
+                        157 Creynolds Lane<br />
+                        Shirley<br />
+                        Solihull<br />
+                        B90 4ES<br />
                     </div>
-                    <div class="col-sm-3">
-                        <button type="submit" class="btn badge badge-pill finder">Search</button>
-                      </div>
-                  </div>
-            </form>
+                </div>
+                <div class="col-sm-4">
+                    <img src="img/map-london.png" class="img-responsive" width="100%"/>
+                    <div class="promo-content">
+                        <h3>London</h3>
+                        <br />
+                        The Shadows<br />
+                        1 Churchill Place<br />
+                        Canary Wharf<br />
+                        London<br />
+                        E14 5HP<br />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <img src="img/map-edinburgh.png" class="img-responsive" width="100%"/>
+                    <div class="promo-content">
+                        <h3>Edinburgh</h3>
+                        <br />
+                        Just Behind<br />
+                        144 Morrison Street<br />
+                        Edinburgh<br />
+                        EH3 8EB<br />
+                        <br />
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Branleys Bank 2026</p>
+                        <p>Branleys Bank is not a real bank, we are not regulated by the FCA, FSA or the FAA.</p>
+                        <p>We do not participate in the FSCS, if you give us money, don't expect it back.</p>
+                    </div>
+                </div>
+            </footer>
         </div>
 
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Branleys Bank 2019</p>
-                    <p>Branleys Bank is not a real bank, we are not regulated by the FCA, FSA or the FAA.</p>
-                    <p>We do not participate in the FSCS, if you give us money, don't expect it back.</p>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
