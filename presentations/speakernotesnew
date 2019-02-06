@@ -1,0 +1,15 @@
+CVE-2019-0001 - THIS IS your life
+i wanted to walk you through the life of a vulnerability. from start to finish, from discovery and through the different routes it could take after that point. 
+
+you will be glad to know, i dont have slides - but i do have post it notes! and dont worry - you dont have to do anything with them - i shall be your hands and we shall decide as a group where they should go. 
+
+the first post it note says CVE number on it - and as the title of the talk, this is CVE-2019-0001. What we will do is using the real example of this CVE lets map the stages to the timeline. So if this wall is the timeline, where do we put CVE in it? discussion etc, put post it somewhere in middle
+
+the next one then that should be discovery. lets put that at the start
+
+fuzzing - where should that go? 
+
+customer experiences issue with product in production
+
+vulnerabilities are problems. software, systems or hardware not working as they should. There is an ecosystem which exists around the discovery and exploitation of these problems - people can earn money from finding things and reporting them to programmes like bug bounties. 
+
