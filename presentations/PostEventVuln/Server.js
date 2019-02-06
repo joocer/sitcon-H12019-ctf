@@ -17,7 +17,7 @@ http.createServer(function(request, response) {
 			requestHandler(request.method.toLowerCase(), request.url.toLowerCase(), body, response);
 		}
 	});
-}).listen(81);
+}).listen(80);
 
 console.log('running - server');
 
