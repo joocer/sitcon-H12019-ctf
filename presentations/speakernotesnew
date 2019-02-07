@@ -1,15 +1,30 @@
 CVE-2019-0001 - THIS IS your life
-i wanted to walk you through the life of a vulnerability. from start to finish, from discovery and through the different routes it could take after that point. 
+you will be glad to know, i dont have slides, i dont have a whiteboard - but i do have post it notes!  dont worry - you dont have to do anything - well, it would be better if you would help out by telling me where to put them, but you dont even have to do that - although if noone says anything then its just me waffling on for 30m! .
 
-you will be glad to know, i dont have slides - but i do have post it notes! and dont worry - you dont have to do anything with them - i shall be your hands and we shall decide as a group where they should go. 
+so then CVE 2019 0001 - this is your life, da daaa da daaa daaa
 
-the first post it note says CVE number on it - and as the title of the talk, this is CVE-2019-0001. What we will do is using the real example of this CVE lets map the stages to the timeline. So if this wall is the timeline, where do we put CVE in it? discussion etc, put post it somewhere in middle
+What i wanted to do with this talk was to walk you through the life of a vulnerability. from start to finish, but we arent just gonna do 2019 0001, we will do a couple because i wanted to illustrate the different flows and journeys these things can take. 
 
-the next one then that should be discovery. lets put that at the start
+SO, lets write cve 2019 0001 on this first post it note. IF the wall behind me is the timeline, starting from about here and going to about here - where do we think the assignment of the CVE number should be? why
 
-fuzzing - where should that go? 
+discussion
 
-customer experiences issue with product in production
+right then, so what leads up to that CVE number being assigned? in the case of 2019 0001, this was a bug in junipers MX series appliance, with a process called the broadband edge subscriber daemon, so how about lets write something went wrong on a post it note? where shall we put that? discussion
 
-vulnerabilities are problems. software, systems or hardware not working as they should. There is an ecosystem which exists around the discovery and exploitation of these problems - people can earn money from finding things and reporting them to programmes like bug bounties. 
+so in this case the vendor advisory states that the problem occurred during product usage, and that probably means that a customer somewhere had this product and that it went wrong. They called Juniper TAC and raised a support case, and that lead to juniper investigating, reproducing the problem and recognising it as a vulnerability. SO - we could have customer buys product. pin to board, customer has problem with product - next to problem one above. customer calls vendor - lets have one for that, after problem, vendor investigates and then starts working on a patch - where does that go? in parallel with the cve number perhaps? 
+
+patch can be released after the cve, as the cve number can be reserved with no details on it. Once the patch is out there then depending how bad the vulnerability is the vendor might not publicise it. FOr instance, there was a Cisco ASA bug which was so bad that they just patched it and kept the disclosure under wraps to give people a chance to upgrade without drawing attention to the fact that something really bad was in the patch - because that leads to RE. 
+
+So , 20190001 - this one - it was found by a customer in a production environment and reported to juniper who patched it in software. DId the exploit writers have a go at this one? well the cvss score says there is no exploit, so it appears not. Obviously, thats to the best available information we have, so we cannot definately say but it appears not. The thing though with this one would be, this was a crash which has been patched without anyone knowing about it, so as an exploit writer, its an issue most people would have fixed already - wheres the incentive? also, its only a dos, so i can in limited circumstances use it to cause a service outage so meh really - why bother? keep writing excel macro exploits, at least you can have some fun with them! 
+
+ok, so thats how its supposed to work - lets talk about another scenario? 
+
+There is a whole eco system where people get paid for finding bugs with popular things. you can make a living as a bug hunter, and typically the rules are - if you find a thing and the company with which that thing exists has a bug bounty programme, if you can reproduce that thing (create a poc) then you can get paid for your efforts. So, how do those guys start?
+
+fuzzing
+auditing the code
+trying to do stuff its not supposed to do
+making an educated guess about when something doesnt work quite right, why that might be????
+
+lets call that vulnerability research and lets put that <post it note>
 

@@ -1,6 +1,8 @@
 CVE-2019-0001 this is your life
 
-By the time a vulnerability has a CVE number, it is nearly dead. 
+By the time a vulnerability has a CVE number, it is nearly dead. but we are goinng to explore why and how this works in practice. 
+
+whats a vulnerability - a weakness - nist definition on screen. 
 
 so where does it all start? it starts with someone detecting that something isnt working as it should, but after that which path it goes depends on who found it and their intentions. 
 
@@ -9,6 +11,10 @@ could be normal operation, misconfiguration or strange inputs the application wa
 if we get it to crash, can we get it to do it again?
 if we can do it repeatably, can we collect core dumps to see what it was that went wrong and whether we can exploit that further?
 and then, whether we want to depends on whether or not those dumps suggest we can do something interesting and whether we can do that from whatever position we hold. FOr instance, we are more interested in a vulnerability which allows us to execute code remotely than one where we have to already be authenitcated on the box. 
+
+a vulnerability is not an exploit. vulns without exploits can be called theoretical exploits. 
+
+break down of cvss score, base, temporal, environmental - takes this into accoungt. 
 
 CVE-2019-0001 started life on a customer site. Things were not well in the network. The engineers had just lost mannagement access to the Juniper MX appliance and users were phoning the helpdesk. An incident ticket was cut. Justin, a plucky young chap, got console access and found the Broadband Edge subscriber management daemon had crashed. Quick thinking as ever, he reloaded the daemon and sure enough full service was restored. Justin started looking into what had lead to the crash and found that if he recreated the conditions prior to the crash then he could get it to happen again. Justin raised a case with JTAC. Juniper collected core dumps and could see what was going on at the time of the issue abd that the problem was malformed traffic entering the device and that caused the service responnsible for parsing that to fall over. 
 
@@ -21,3 +27,5 @@ At this point there is no CVE number and we are dealing with whats called a 0day
 Dave of course, might spot Justin's nefarious wrong doing, collect crash dumps and report it to juniper himself and in which case we might get into the above process, a cve number allocated and work begun on a patch. 
 
 THere's another approach, which is that if this was actually your job, i..e you earned money doing exploit development then what you might be doing is something called fuzzing. This is the process of automating the injection of random nonsense to the exposed interfaces of an application in order to produce a crash. Once you have a crash, analyse it, what can we learn, what can we do with it. Depending who is doing the fuzzing, this can lead to interesting results. For instance, its believed the american National security agency found a bug in microsofts SMBv1 implementation and it was so good, so potent that they kept it for themselves without telling microsoft about it until they lost control of this 'cyber weapon' and had to tell them. Of course, once something has been used in the wild then the cat is out of the bag and others can analyse the nature of the exploit and start to build mitigations
+
+internally vs externally found - internal testing, scanning - theoretical, external finding of researcher, customer, other vendor
