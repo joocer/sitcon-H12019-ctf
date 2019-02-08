@@ -17,7 +17,11 @@ patch can be released after the cve, as the cve number can be reserved with no d
 
 So , 20190001 - this one - it was found by a customer in a production environment and reported to juniper who patched it in software. DId the exploit writers have a go at this one? well the cvss score says there is no exploit, so it appears not. Obviously, thats to the best available information we have, so we cannot definately say but it appears not. The thing though with this one would be, this was a crash which has been patched without anyone knowing about it, so as an exploit writer, its an issue most people would have fixed already - wheres the incentive? also, its only a dos, so i can in limited circumstances use it to cause a service outage so meh really - why bother? keep writing excel macro exploits, at least you can have some fun with them! 
 
-ok, so thats how its supposed to work - lets talk about another scenario? 
+
+so thats how its supposed to work - just bbefore we move on - i wanted to touch on reverse engineering and the other end of the scale. We mentioned above that sometimes (rarely) vendors might bury disclosure of a CVE to prevent actors reverse engineering. So what that means is that once a patch is released for a bug, you can work out what that patch changed and start to look for the problem in the older version, which could mean you could build an exploit for an unpatched system. But, the drawback to this is that you have to be really skilled to do it and its a lot of work to exploit something which has actually been fixed, therefore its got to be a really juicy bug or you have to be confident that people arent going to patch in a reasonable time. 
+
+
+ok, lets talk about another scenario? 
 
 There is a whole eco system where people get paid for finding bugs with popular things. you can make a living as a bug hunter, and typically the rules are - if you find a thing and the company with which that thing exists has a bug bounty programme, if you can reproduce that thing (create a poc) then you can get paid for your efforts. So, how do those guys start?
 
@@ -28,3 +32,15 @@ making an educated guess about when something doesnt work quite right, why that 
 
 lets call that vulnerability research and lets put that <post it note>
 
+really clever researchers will find a new bug class, automate the exploitation of it and then sign up to all the bug bounties and strip out this new bug across them all. People have made millions like this. clever people
+
+just before you all quit your jobs and go off finding bug bounty programmes to join - 
+sandbox escaper - responsible disclosure taking ages, being very frustrating so just drops it on twitter. in that case vendor hears about it and would validate, start work on a patch and then apply for a cve - this is a 0day. 
+
+One other scenario which i wanted to quickly cover and thats code review. So if you make a thing then you can either review your code by hand or by making it open source, or you can use automated code scanning tools to find and flag errors which you should fix. these vulns get acknowledged and patched by vendors usually without getting exploited. 
+
+the point being - the assignment of a cve is near the end of the life of the vulnerability because its known about then, someone has acknowledged it and is working on a fix. 
+
+just as an aside, just because something is vulnerable - doesnt mean that its exploitable. Anyone got an idea what percentage of vulnerabilities are actually exploitable? 23%
+
+77% of vulns never get exploited. 
