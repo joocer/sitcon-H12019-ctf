@@ -162,3 +162,5 @@ footer {
     transform: rotate(45deg);
     display: inline-block;
   }
+
+  .two { margin-right: 6px; }
