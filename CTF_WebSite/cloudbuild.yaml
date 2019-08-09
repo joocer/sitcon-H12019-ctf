@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/ben-scratch/branley-bank', '.' ]
+images:
+- 'gcr.io/ben-scratch/branley-bank'
