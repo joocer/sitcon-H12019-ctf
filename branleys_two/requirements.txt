@@ -5,7 +5,7 @@ captcha==0.3
 cffi==1.12.2
 Click==7.0
 cryptography==2.6.1
-Django==2.2
+Django==2.2.4
 dominate==2.3.5
 Faker==1.0.5
 Flask==1.0.2
