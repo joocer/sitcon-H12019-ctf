@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+    <div class="divider">
+        <h1>{{ post.title }}</h1>
+    </div>
+    <div class="timestamp">
+        Live since {{ moment(post.timestamp).fromNow() }}
+    </div>
+
+    <br>
+
+    <div class="postbody">
+        <p>{{post.body}}</p>
+    </div>
+
+    <p id="voteCount">Has {{ post.getVotes() }} votes</p>
+
+    <br/>
+
+    {% if canvote == True %}
+        <div id="votediv">
+            <button type="button" name="VoteButton" onclick="vote('{{url_for('vote', campaign_id=post.id)}}')">Vote</button>
+            <b>Please vote to help us bring change</b>
+        </div>
+    {% else %}
+        <h3>
+            Thanks for voting for this.
+        </h3>
+    {% endif %}
+    <br/>
+
+
+    {% if memes %}
+        <div class="divider" >
+            <h1>What others are saying.</h1>
+        </div>
+
+        {% for m in memes %}
+            {% include 'meme.html' %}
+        {% endfor %}
+
+        <nav aria-label="...">
+            <ul class="pager">
+                <li class="previous{% if not prev_url %} disabled{% endif %}">
+                    <a href="{{ prev_url or '#' }}">
+                        <span aria-hidden="true">&larr;</span> Newer Memes
+                    </a>
+                </li>
+                <li class="next{% if not next_url %} disabled{% endif %}">
+                    <a href="{{ next_url or '#' }}">
+                        Older Memes <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    {% endif %}
+
+    <br>
+    <div class="divider">
+        <h1>Add your own voice.</h1>
+    </div>
+
+    <button id="CreateMemeButton" type="button" onclick="bringChange()">Start Change</button>
+
+    {% include 'meme_form.html' %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+        function bringChange() {
+            $("#memeform").toggle('slow', () => {
+                $("#memeform").toggleClass('hidden');
+  	            $("#memeform").get(0).scrollIntoView();
+            });
+        }
+
+        // initialise as invisible
+        //$(document).ready(function(){ bringChange(); })
+    </script>
+    <script>
+
+    function vote(url) {
+        // do vote asynchronously
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", url, true ); // false for synchronous request
+        xmlHttp.send( null );
+        // update vote button interface
+        $('#votediv').fadeOut(500, function() {
+            $(this).empty().show();
+            $("#votediv").html("<h3>Thanks for voting for this.</h3>");
+        });
+        // client side increment of vote by one. Server side only allows one
+        var votes = $("#voteCount").text().split(" ")[1];
+        var voteint = parseInt(votes, 10);
+        $("#voteCount").text("Has " + (voteint+1) + " votes");
+    }
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#previewImage').attr('src', e.target.result);
+                $('#preview').css('visibility', 'visible');
+                $('#preview').show();
+
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            // hide preview
+            $('#preview').hide();
+        }
+    }
+
+    function updateText(input) {
+        console.log($('#memetext').val());
+        $("#previewText").text($('#memetext').val());
+    }
+
+    $("#image").change(function(){
+        readURL(this);
+    });
+
+    $("#memetext").keyup(function(){
+        updateText(this);
+    });
+
+
+    </script>
+{% endblock %}

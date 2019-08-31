@@ -1,0 +1,59 @@
+{% extends 'bootstrap/base.html' %} {% block title %} {% if title %}{{ title }} - Branley's Bank{% else %}Branley's Bank{% endif %} {% endblock %} {% block styles %}
+<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" /> {% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+{{ moment.include_moment(local_js=url_for('static', filename='js/moment-with-locales.min.js')) }} {% endblock %} {% block navbar %}
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='img/Logo.png') }}" width="140px" id="headerlogo" />
+        </a>
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <!-- More links to go here left of search-->
+            </ul>
+
+            <div class="col-sm-3 col-md-3">
+                {% if not current_user.is_anonymous %}
+                <form class="navbar-form" role="search" action="{{ url_for('search') }}" method="GET">
+                    <div class="input-group">
+                        {% if searchterm is not defined%}
+                        <input type="text" class="form-control" placeholder="Search" name="q"> {% else %}
+                        <input type="text" class="form-control" placeholder="Search" name="q" value="{{searchterm}}"> {% endif %}
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">Search</button>
+                        </div>
+                    </div>
+                </form>
+                {% endif %}
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                {% if current_user.is_anonymous %}
+                <li><a class="nav-link" href="{{ url_for('login') }}"><span class="badge badge-pill">Log In</span></a></li>
+                {% else %}
+                <li><a class="nav-link" href="{{ url_for('user') }}"><span class="badge badge-pill">Profile</span></a></li>
+                <li><a class="nav-link" href="{{ url_for('logout') }}"><span class="badge badge-pill">Log Out</span></a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+
+    </div>
+</nav>
+{% endblock %} {% block content %}
+<div class="container">
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <div class="alert alert-info" role="alert">{{ message }}</div>
+    {% endfor %} {% endif %} {% endwith %} {# application content needs to be provided in the app_content block #} {% block app_content %}{% endblock %}
+</div>
+
+
+{% block footer %} {% include 'footer.html' %} {% endblock %} {% endblock %}

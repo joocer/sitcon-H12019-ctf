@@ -1,0 +1,14 @@
+    <table class="table table-hover">
+        <tr onclick="window.location = '{{ url_for('campaign', campaign_id=post.id) }}'">
+
+            <td>
+                <h3>{{ post.title }}</h3>
+                <p>Has {{ post.getVotes() }} votes</p>
+                <div class="timestamp">Live since {{ moment(post.timestamp).fromNow() }}</div>
+            </td>
+            <td>
+
+            </td>
+
+        </tr>
+    </table>

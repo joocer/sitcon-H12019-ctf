@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block app_content %}
+
+<br>
+
+<div class="divider">
+    <h1>About Us</h1>
+</div>
+
+<!-- Quote -->
+<p>The journey of Avalanche truly began with this quote:</p>
+<center>
+    <h2><i>“Be the change that you wish to see in the world.”</i></h2>
+</center>
+<center>-- Mahatma Gandhi</center>
+<br>
+
+<div class="col-xs-7 left">
+    <p>We were backpacking when we heard this and it resonated within us.</p>
+    <p>It inspired us to found Avalanche and allow others to <b>bring change</b> into the world.</p>
+    <p>Today we have the technology to scream at injustice and alter society.</p>
+    <p>NOW is the time to make your voices heard and rise above the rabble.</p>
+    <br>
+    <p><b>Snowflakes become the snow that start the Avalanche.</b></p>
+    <br>
+
+    <center>
+        <img src="{{ url_for('static', filename='img/TopDog.jpg') }}" width="400px" height="400px" title="Bruin was TopDog">
+    </center>
+
+
+</div>
+
+<div class="col-xs-5 right">
+    <a href="https://twitter.com/intent/tweet?text=Hey%20%40cornerpirate.%20I%20enjoyed%20the%20%23Avalanche%20CTF.%20Thanks!">
+        <img src="{{ url_for('static', filename='img/cornerpirate.png') }}" width="200px" height="200px" title="Creator of the CTF @cornerpirate, click my face to tweet me">
+    </a>
+
+    <img src="{{ url_for('static', filename='img/mega.png') }}" width="200px" height="200px" title="Source & Credit: https://www.pexels.com/photo/photo-of-woman-listening-to-music-2087753/">
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+
+    <div class="divider">
+        <h1>An error occured</h1>
+    </div>
+
+	<br>
+
+	<div class="alert alert-warning" role="alert">
+		{{ context }}
+	</div>
+
+{% endblock %}
